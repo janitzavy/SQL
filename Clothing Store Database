@@ -30,7 +30,7 @@ SELECT * FROM clothing_store ORDER BY price ASC;
 -- All items that are marked below $10
 SELECT * FROM clothing_store WHERE price < 10 ORDER BY price DESC;
 
--- Sum of price if I buy the 2 shirts available
+-- Price total of purchase of 2 tops/shirts
 SELECT SUM(price) FROM clothing_store WHERE category = "Tees and Tops"
 
 
