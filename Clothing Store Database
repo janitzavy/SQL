@@ -1,0 +1,36 @@
+CREATE TABLE Clothing_Store
+(id INTEGER PRIMARY KEY,
+item TEXT, 
+size TEXT,
+price INTEGER,
+category TEXT,
+brand TEXT,
+color TEXT);
+
+INSERT INTO Clothing_Store VALUES (1,"Floral Dress","L", 14.25, "Dresses", "TRIF", "multi");
+INSERT INTO Clothing_Store VALUES (2,"Solid V Neck","XS", 4.25, "Tees and Tops", "Old Navy", "brown" );
+INSERT INTO Clothing_Store VALUES (3,"Solid Cami Top","M", 5.99, "Tees and Tops", "SHEIN VCAY", "pink");
+INSERT INTO Clothing_Store VALUES (4,"Grunge Print Pants","XL", 6.50, "bottoms", "ROMWE", "multi");
+INSERT INTO Clothing_Store VALUES (5,"A-Line Plaid Skirt","L", 6.25, "bottoms", "DAZY", "black");
+INSERT INTO Clothing_Store VALUES (6,"Cargo Pants","XL", 20.5, "bottoms", "SHEIN EZwear", "brown");
+INSERT INTO Clothing_Store VALUES (7,"Lace Underwire Bralette","38C", 5.99, "Lingerie", "VICTORIA SECRET", "red");
+INSERT INTO Clothing_Store VALUES (8,"Soft Support Bra","L", 12.8, "lingerie", "LUVLETTE", 
+"black");
+INSERT INTO Clothing_Store VALUES (9,"Tummy Control Leggings","XL", 10.50, "Activewear", "LULULEMON", "blue");
+INSERT INTO Clothing_Store VALUES (10,"Racer Back Sports Bra","M", 6.75, "Activewear", "NIKE", "white");
+INSERT INTO Clothing_Store VALUES (11,"Animal Print One Piece","L", 11.99, "Swimwear", "SHEIN VCAY", "multi");
+INSERT INTO Clothing_Store VALUES (12,"Bikiki 2-piece","M", 15.42, "Swimwear", "SHEIN VCAY", "Pink");
+INSERT INTO Clothing_Store VALUES (13,"Ballet Flats","7", 23.80, "Shoes", "CUCCOO", "black");
+INSERT INTO Clothing_Store VALUES (14,"Sandals","10", 9.99, "Shoes", "CUCCOO", "white");
+INSERT INTO Clothing_Store VALUES (15,"Knit Cardigan","XL", 12.75, "Jackets", "EMERY ROSE", "gray");
+
+-- All items from Store in Ascending Order from price
+SELECT * FROM clothing_store ORDER BY price ASC;
+
+-- All items that are marked below $10
+SELECT * FROM clothing_store WHERE price < 10 ORDER BY price DESC;
+
+-- Sum of price if I buy the 2 shirts available
+SELECT SUM(price) FROM clothing_store WHERE category = "Tees and Tops"
+
+
